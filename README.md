@@ -127,14 +127,14 @@ Container Registry: https://www.cleanstart.com/
 MinIO GitHub Repository: https://github.com/minio/operator
 
 **
-### Resources & Documentation  
-Essential links and resources for further information:
+### 
+### Resources
 
-- CleanStart Website: https://www.cleanstart.com
+- Official Documentation: https://min.io/docs/minio/kubernetes/deployment/deploy-operator.html
 - View Provenance, Specifications, SBOM, Signature at: https://images.cleanstart.com/images/minio-operator-sidecar
+- Docker Hub: https://hub.docker.com/r/cleanstart/minio-operator-sidecar
 - CleanStart All Images: https://images.cleanstart.com
-- CleanStart Community Images: https://hub.docker.com/u/cleanstart
-- Other location for Community image: https://hub.docker.com/r/cleanstart/minio-operator-sidecar
+- CleanStart All Community Images: https://hub.docker.com/u/cleanstart
 
 ---
 
