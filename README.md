@@ -1,14 +1,14 @@
-**🧩 MinIO Operator Sidecar**
+- *🧩 MinIO Operator Sidecar**
 
 The MinIO Operator Sidecar container provides essential functionality for managing and orchestrating MinIO deployments in Kubernetes environments. It facilitates automated operations, monitoring, and maintenance of MinIO instances while ensuring high availability and scalability for enterprise object storage solutions.
 
-**🏗️ Base Foundation**
+- *🏗️ Base Foundation**
 
 Security-hardened, minimal base OS designed for enterprise containerized environments — sourced from Cleanstart Registry.
 
-**🚀 Key Features**
+- *🚀 Key Features**
 
-**Core capabilities and strengths of this container:**
+- *Core capabilities and strengths of this container:**
 
 Automated MinIO cluster management and orchestration
 
@@ -18,7 +18,7 @@ Integrated monitoring and health checking
 
 Automated certificate management and TLS configuration
 
-**💼 Common Use Cases**
+- *💼 Common Use Cases**
 
 Typical scenarios where this container excels:
 
@@ -30,9 +30,9 @@ Multi-tenant storage orchestration
 
 Scalable data backup and archive solutions
 
-**📦 Pull Latest Image**
+- *📦 Pull Latest Image**
 
-**Download the container image from the registry:**
+- *Download the container image from the registry:**
 
 ```bash
 docker pull cleanstart/minio-operator-sidecar:latest
@@ -44,17 +44,17 @@ or for the development version:
 docker pull cleanstart/minio-operator-sidecar:latest-dev
 ```
 
-**▶️ Basic Run**
+- *▶️ Basic Run**
 
-**Run the container with a basic configuration:**
+- *Run the container with a basic configuration:**
 
 ```bash
 docker run -it --name minio-operator-sidecar cleanstart/minio-operator-sidecar:latest
 ```
 
-**🏭 Production Deployment**
+- *🏭 Production Deployment**
 
-**Deploy with production security settings:**
+- *Deploy with production security settings:**
 
 ```bash
 docker run -d --name minio-operator-sidecar-prod \
@@ -66,9 +66,9 @@ docker run -d --name minio-operator-sidecar-prod \
   cleanstart/minio-operator-sidecar:latest
 ```
 
-**💾 Volume Mount**
+- *💾 Volume Mount**
 
-**Mount a local directory for persistent configuration and certificates:**
+- *Mount a local directory for persistent configuration and certificates:**
 
 ```bash
 docker run \
@@ -77,16 +77,16 @@ docker run \
   cleanstart/minio-operator-sidecar:latest
 ```
 
-**⚙️ Environment Variables**
-**Variable	Default	Description**
+- *⚙️ Environment Variables**
+- *Variable	Default	Description**
 MINIO_OPERATOR_TLS_ENABLE	false	Enable TLS for operator communications
 MINIO_OPERATOR_CLUSTER_NAME	minio-cluster	Name of the MinIO cluster
 MINIO_OPERATOR_NAMESPACE	minio-operator	Kubernetes namespace for the operator
 MINIO_OPERATOR_IMAGE_PULL_SECRET	''	Image pull secret for private registries
 
-**🔐 Security Best Practices**
+- *🔐 Security Best Practices**
 
-**Recommended configurations for secure deployments:**
+- *Recommended configurations for secure deployments:**
 
 Enable TLS for all communications
 
@@ -100,9 +100,9 @@ Enforce network policies
 
 Define resource quotas
 
-**🛡️ Kubernetes Security Context**
+- *🛡️ Kubernetes Security Context**
 
-**Recommended security context for Kubernetes deployments:**
+- *Recommended security context for Kubernetes deployments:**
 
 ```bash
 securityContext:
@@ -118,7 +118,7 @@ securityContext:
     type: RuntimeDefault
 ```
 
-**📚 Documentation Resources**
+- *📚 Documentation Resources**
 
 MinIO Operator Documentation: https://docs.min.io/minio/k8s/
 
@@ -126,17 +126,17 @@ Container Registry: https://www.cleanstart.com/
 
 MinIO GitHub Repository: https://github.com/minio/operator
 
-**
-### 
-### Resources
+- *
 
-- Official Documentation: https://min.io/docs/minio/kubernetes/deployment/deploy-operator.html
-- View Provenance, Specifications, SBOM, Signature at: https://images.cleanstart.com/images/minio-operator-sidecar
-- Docker Hub: https://hub.docker.com/r/cleanstart/minio-operator-sidecar
-- CleanStart All Images: https://images.cleanstart.com
-- CleanStart All Community Images: https://hub.docker.com/u/cleanstart
+###
 
----
+## Resources
+
+- **Official Documentation:** https://min.io/docs/minio/kubernetes/deployment/deploy-operator.html
+- **Provenance / SBOM / Signature:** https://images.cleanstart.com/images/minio-operator-sidecar
+- **Docker Hub:** https://hub.docker.com/r/cleanstart/minio-operator-sidecar
+- **CleanStart All Images:** https://images.cleanstart.com
+- **CleanStart Community Images:** https://hub.docker.com/u/cleanstart
 
 ### Vulnerability Disclaimer
 
