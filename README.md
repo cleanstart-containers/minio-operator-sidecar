@@ -1,61 +1,61 @@
-- *🧩 MinIO Operator Sidecar**
+# 🧩 MinIO Operator Sidecar
 
 The MinIO Operator Sidecar container provides essential functionality for managing and orchestrating MinIO deployments in Kubernetes environments. It facilitates automated operations, monitoring, and maintenance of MinIO instances while ensuring high availability and scalability for enterprise object storage solutions.
 
-- *🏗️ Base Foundation**
+## 🏗️ Base Foundation
 
-Security-hardened, minimal base OS designed for enterprise containerized environments — sourced from Cleanstart Registry.
+Security-hardened, minimal base OS designed for enterprise containerized environments — sourced from CleanStart Registry.
 
-- *🚀 Key Features**
+---
 
-- *Core capabilities and strengths of this container:**
+## 🚀 Key Features
 
-Automated MinIO cluster management and orchestration
+Core capabilities and strengths of this container:
 
-Kubernetes-native deployment and scaling capabilities
+- Automated MinIO cluster management and orchestration
+- Kubernetes-native deployment and scaling capabilities
+- Integrated monitoring and health checking
+- Automated certificate management and TLS configuration
 
-Integrated monitoring and health checking
+---
 
-Automated certificate management and TLS configuration
-
-- *💼 Common Use Cases**
+## 💼 Common Use Cases
 
 Typical scenarios where this container excels:
 
-Enterprise object storage deployment automation
+- Enterprise object storage deployment automation
+- Cloud-native storage infrastructure management
+- Multi-tenant storage orchestration
+- Scalable data backup and archive solutions
 
-Cloud-native storage infrastructure management
+---
 
-Multi-tenant storage orchestration
+## 📦 Pull Latest Image
 
-Scalable data backup and archive solutions
-
-- *📦 Pull Latest Image**
-
-- *Download the container image from the registry:**
-
+Download the container image from the registry:
 ```bash
 docker pull cleanstart/minio-operator-sidecar:latest
 ```
 
-or for the development version:
-
+Or for the development version:
 ```bash
 docker pull cleanstart/minio-operator-sidecar:latest-dev
 ```
 
-- *▶️ Basic Run**
+---
 
-- *Run the container with a basic configuration:**
+## ▶️ Basic Run
 
+Run the container with a basic configuration:
 ```bash
 docker run -it --name minio-operator-sidecar cleanstart/minio-operator-sidecar:latest
 ```
 
-- *🏭 Production Deployment**
+---
 
-- *Deploy with production security settings:**
+## 🏭 Production Deployment
 
+Deploy with production security settings:
 ```bash
 docker run -d --name minio-operator-sidecar-prod \
   --read-only \
@@ -66,10 +66,11 @@ docker run -d --name minio-operator-sidecar-prod \
   cleanstart/minio-operator-sidecar:latest
 ```
 
-- *💾 Volume Mount**
+---
 
-- *Mount a local directory for persistent configuration and certificates:**
+## 💾 Volume Mount
 
+Mount a local directory for persistent configuration and certificates:
 ```bash
 docker run \
   -v $(pwd)/config:/opt/minio-operator/config \
@@ -77,34 +78,36 @@ docker run \
   cleanstart/minio-operator-sidecar:latest
 ```
 
-- *⚙️ Environment Variables**
-- *Variable	Default	Description**
-MINIO_OPERATOR_TLS_ENABLE	false	Enable TLS for operator communications
-MINIO_OPERATOR_CLUSTER_NAME	minio-cluster	Name of the MinIO cluster
-MINIO_OPERATOR_NAMESPACE	minio-operator	Kubernetes namespace for the operator
-MINIO_OPERATOR_IMAGE_PULL_SECRET	''	Image pull secret for private registries
+---
 
-- *🔐 Security Best Practices**
+## ⚙️ Environment Variables
 
-- *Recommended configurations for secure deployments:**
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `MINIO_OPERATOR_TLS_ENABLE` | `false` | Enable TLS for operator communications |
+| `MINIO_OPERATOR_CLUSTER_NAME` | `minio-cluster` | Name of the MinIO cluster |
+| `MINIO_OPERATOR_NAMESPACE` | `minio-operator` | Kubernetes namespace for the operator |
+| `MINIO_OPERATOR_IMAGE_PULL_SECRET` | `''` | Image pull secret for private registries |
 
-Enable TLS for all communications
+---
 
-Implement proper RBAC policies
+## 🔐 Security Best Practices
 
-Use secure secrets management
+Recommended configurations for secure deployments:
 
-Apply regular security patches and updates
+- Enable TLS for all communications
+- Implement proper RBAC policies
+- Use secure secrets management
+- Apply regular security patches and updates
+- Enforce network policies
+- Define resource quotas
 
-Enforce network policies
+---
 
-Define resource quotas
+## 🛡️ Kubernetes Security Context
 
-- *🛡️ Kubernetes Security Context**
-
-- *Recommended security context for Kubernetes deployments:**
-
-```bash
+Recommended security context for Kubernetes deployments:
+```yaml
 securityContext:
   runAsNonRoot: true
   runAsUser: 1000
@@ -117,19 +120,6 @@ securityContext:
   seccompProfile:
     type: RuntimeDefault
 ```
-
-- *📚 Documentation Resources**
-
-MinIO Operator Documentation: https://docs.min.io/minio/k8s/
-
-Container Registry: https://www.cleanstart.com/
-
-MinIO GitHub Repository: https://github.com/minio/operator
-
-- *
-
-###
-
 ## Resources
 
 - **Official Documentation:** https://min.io/docs/minio/kubernetes/deployment/deploy-operator.html
@@ -138,10 +128,12 @@ MinIO GitHub Repository: https://github.com/minio/operator
 - **CleanStart All Images:** https://images.cleanstart.com
 - **CleanStart Community Images:** https://hub.docker.com/u/cleanstart
 
-### Vulnerability Disclaimer
+---
+
+## Vulnerability Disclaimer
 
 CleanStart offers Docker images that include third-party open-source libraries and packages maintained by independent contributors. While CleanStart maintains these images and applies industry-standard security practices, it cannot guarantee the security or integrity of upstream components beyond its control.
 
 Users acknowledge and agree that open-source software may contain undiscovered vulnerabilities or introduce new risks through updates. CleanStart shall not be liable for security issues originating from third-party libraries, including but not limited to zero-day exploits, supply chain attacks, or contributor-introduced risks.
 
-Security remains a shared responsibility: CleanStart provides updated images and guidance where possible, while users are responsible for evaluating deployments and implementing appropriate controls.
+**Security remains a shared responsibility:** CleanStart provides updated images and guidance where possible, while users are responsible for evaluating deployments and implementing appropriate controls.
