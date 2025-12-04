@@ -34,12 +34,12 @@ Typical scenarios where this container excels:
 
 Download the container image from the registry:
 ```bash
-docker pull cleanstart/minio-operator-sidecar:latest
+docker pull ghcr.io/cleanstart-containers/minio-operator-sidecar:latest
 ```
 
 Or for the development version:
 ```bash
-docker pull cleanstart/minio-operator-sidecar:latest-dev
+docker pull ghcr.io/cleanstart-containers/minio-operator-sidecar:latest-dev
 ```
 
 ---
@@ -48,7 +48,7 @@ docker pull cleanstart/minio-operator-sidecar:latest-dev
 
 Run the container with a basic configuration:
 ```bash
-docker run -it --name minio-operator-sidecar cleanstart/minio-operator-sidecar:latest
+docker run -it --name minio-operator-sidecar ghcr.io/cleanstart-containers/minio-operator-sidecar:latest
 ```
 
 ---
@@ -63,7 +63,7 @@ docker run -d --name minio-operator-sidecar-prod \
   --user 1000:1000 \
   -e MINIO_OPERATOR_TLS_ENABLE=true \
   -e MINIO_OPERATOR_CLUSTER_NAME=prod-cluster \
-  cleanstart/minio-operator-sidecar:latest
+  ghcr.io/cleanstart-containers/minio-operator-sidecar:latest
 ```
 
 ---
@@ -75,7 +75,7 @@ Mount a local directory for persistent configuration and certificates:
 docker run \
   -v $(pwd)/config:/opt/minio-operator/config \
   -v $(pwd)/certs:/opt/minio-operator/certs \
-  cleanstart/minio-operator-sidecar:latest
+  ghcr.io/cleanstart-containers/minio-operator-sidecar:latest
 ```
 
 ---
