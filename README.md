@@ -125,7 +125,7 @@ securityContext:
 - **Official Documentation:** https://min.io/docs/minio/kubernetes/deployment/deploy-operator.html
 - **Provenance / SBOM / Signature:** https://images.cleanstart.com/images/minio-operator-sidecar
 - **Docker Hub:** https://hub.docker.com/r/cleanstart/minio-operator-sidecar
-- **CleanStart All Images:** https://images.cleanstart.com
+- **CleanStart All Images:** https://images.cleanstart.com/images/minio-operator-sidecar/details
 - **CleanStart Community Images:** https://hub.docker.com/u/cleanstart
 
 ---
